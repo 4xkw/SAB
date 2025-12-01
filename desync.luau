@@ -2,7 +2,22 @@ local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local Workspace = game:GetService("Workspace")
 
-local function respawn(plr: Player) : ()
+local FFlags: {[string]: any} = {
+    
+        NextGenReplicatorEnabledWrite4 = true,
+
+}
+
+for name, value in FFlags do
+
+    pcall(function()
+
+        setfflag(tostring(name), tostring(value))
+
+    end)
+end
+
+local function respawn(plr: Player)
 
     local char = plr.Character
     local hum = char and char:FindFirstChildWhichIsA("Humanoid")
