@@ -96,8 +96,6 @@ local function AutoConfirmBlockPrompt(): ()
         
         if not success then
 
-            warn("Erro ao confirmar prompt de bloqueio: " .. tostring(err))
-
         end
 
     end)
